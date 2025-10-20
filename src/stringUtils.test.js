@@ -10,7 +10,7 @@ describe("stringUtils", () => {
   describe("capitalize", () => {
     test("should capitalize the first letter", () => {
       assert.strictEqual(capitalize("hello"), "Hello");
-      assert.strictEqual(capitalize("world"), "World");
+      assert.strictEqual(capitalize("world"), "Wodsdsdsrld");
     });
 
     test("should handle already capitalized strings", () => {
