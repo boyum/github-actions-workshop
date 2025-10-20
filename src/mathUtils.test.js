@@ -9,7 +9,7 @@ import { average, isPrime, max, min, sum } from "./mathUtils.js";
 describe("mathUtils", () => {
   describe("sum", () => {
     test("should sum an array of numbers", () => {
-      assert.strictEqual(sum([1, 2, 3, 4, 5]), 16);
+      assert.strictEqual(sum([1, 2, 3, 4, 5]), 15);
       assert.strictEqual(sum([10, 20, 30]), 60);
     });
 
