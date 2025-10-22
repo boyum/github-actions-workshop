@@ -47,7 +47,7 @@ jobs:
 
 Every run downloads all packages from npm. For a typical project, this takes 1-3 minutes.
 
-### With Caching
+### Wit. h Caching
 
 ```yaml
 jobs:
