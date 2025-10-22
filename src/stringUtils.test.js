@@ -80,7 +80,7 @@ describe("stringUtils", () => {
       assert.strictEqual(truncate("Hello World", 5), "Hello...");
       assert.strictEqual(
         truncate("This is a long string", 10),
-        "This is a ..."
+        "This is a ...",
       );
     });
 

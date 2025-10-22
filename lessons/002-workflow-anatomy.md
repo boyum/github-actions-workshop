@@ -237,7 +237,6 @@ This is incredibly useful for workflows that deploy to production—you want man
 Click into each job and expand the steps. Notice:
 
 - **In "Gather System Information"**:
-
   - The checkout step clones your repository
   - The runner information shows Linux
   - You see your repository files listed

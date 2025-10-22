@@ -56,13 +56,13 @@ on:
 jobs:
   say-hello:
     name: Say Hello
-  
+
     # Which type of machine to run the job on (other options include `windows-latest` and `macos-latest`)
     runs-on: ubuntu-latest
 
     steps:
-        # As with workflow and job names, step names are optional but recommended.
-        # In case you need to debug your workflow later, having descriptive names is very helpful.
+      # As with workflow and job names, step names are optional but recommended.
+      # In case you need to debug your workflow later, having descriptive names is very helpful.
       - name: Print greeting
         run: echo "Hello, GitHub Actions! Welcome to the workshop!"
 
@@ -83,6 +83,8 @@ jobs:
    ```bash
    git add .github/workflows/hello-world.yml
    git commit -m "Add hello world workflow"
+   ```
+
 3. Push to your repository:
 
    ```bash
@@ -93,7 +95,7 @@ jobs:
 
 1. Go to the "Actions" tab in your GitHub repository.
 2. You should see a new workflow run for "Hello World Workflow 🌏" triggered by
-    your recent push.
+   your recent push.
 3. Click on the workflow run to see the details.
 4. Click on the job `say-hello` to see the steps executed.
 5. Expand each step to see the output, including the greeting message, date and time, and system information.

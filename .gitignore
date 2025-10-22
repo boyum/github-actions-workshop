@@ -32,3 +32,9 @@ coverage/
 # Temporary files
 tmp/
 temp/
+
+# Puppeteer / Browser testing
+screenshot*.png
+*.png
+.cache/
+.local-chromium/

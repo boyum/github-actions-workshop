@@ -1,57 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Demo - GitHub Actions Workshop</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
     <header>
-        <h1>GitHub Actions Workshop</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="tasks.html">Tasks</a></li>
-                <li><a href="demo.html">Demo</a></li>
-                <li><a href="snake.html">Snake</a></li>
-            </ul>
-        </nav>
+      <h1>GitHub Actions Workshop</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="tasks.html">Tasks</a></li>
+          <li><a href="demo.html">Demo</a></li>
+          <li><a href="snake.html">Snake</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-        <section>
-            <h2>Utility Functions Demo</h2>
-            <p>This page demonstrates the utility functions built for this workshop.</p>
+      <section>
+        <h2>Utility Functions Demo</h2>
+        <p>
+          This page demonstrates the utility functions built for this workshop.
+        </p>
 
-            <div class="demo-section">
-                <h3>String Utilities</h3>
-                <div class="demo-box">
-                    <label for="string-input">Enter text:</label>
-                    <input type="text" id="string-input" placeholder="hello world">
-                    <button onclick="testStringUtils()">Test String Utils</button>
-                    <div id="string-output" class="output"></div>
-                </div>
-            </div>
+        <div class="demo-section">
+          <h3>String Utilities</h3>
+          <div class="demo-box">
+            <label for="string-input">Enter text:</label>
+            <input type="text" id="string-input" placeholder="hello world" />
+            <button onclick="testStringUtils()">Test String Utils</button>
+            <div id="string-output" class="output"></div>
+          </div>
+        </div>
 
-            <div class="demo-section">
-                <h3>Math Utilities</h3>
-                <div class="demo-box">
-                    <label for="numbers-input">Enter numbers (comma-separated):</label>
-                    <input type="text" id="numbers-input" placeholder="1, 2, 3, 4, 5">
-                    <button onclick="testMathUtils()">Test Math Utils</button>
-                    <div id="math-output" class="output"></div>
-                </div>
-            </div>
-        </section>
+        <div class="demo-section">
+          <h3>Math Utilities</h3>
+          <div class="demo-box">
+            <label for="numbers-input">Enter numbers (comma-separated):</label>
+            <input type="text" id="numbers-input" placeholder="1, 2, 3, 4, 5" />
+            <button onclick="testMathUtils()">Test Math Utils</button>
+            <div id="math-output" class="output"></div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 GitHub Actions Workshop</p>
+      <p>&copy; 2025 GitHub Actions Workshop</p>
     </footer>
 
     <script src="js/main.js"></script>
     <script src="js/demo.js"></script>
-</body>
+  </body>
 </html>

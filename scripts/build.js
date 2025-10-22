@@ -5,9 +5,6 @@
 
 
 
-
-
-
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -64,15 +61,15 @@ function clean() {
  */
 function generateMarkdownHTML(title, content) {
   return `<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${title} - GitHub Actions Workshop</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/github-markdown.css">
-    <style>
-        .markdown-body {
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>${title} - GitHub Actions Workshop</title>
+        <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="../css/github-markdown.css" />
+        <style>
+          .markdown-body {
             box-sizing: border-box;
             min-width: 200px;
             max-width: 980px;
@@ -80,48 +77,46 @@ function generateMarkdownHTML(title, content) {
             padding: 45px;
             background: white;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        @media (max-width: 767px) {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+          }
+          @media (max-width: 767px) {
             .markdown-body {
-                padding: 15px;
+              padding: 15px;
             }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>GitHub Actions Workshop</h1>
-        <nav>
+          }
+        </style>
+      </head>
+      <body>
+        <header>
+          <h1>GitHub Actions Workshop</h1>
+          <nav>
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../about.html">About</a></li>
-                <li><a href="../tasks.html">Tasks</a></li>
-                <li><a href="../demo.html">Demo</a></li>
-                <li><a href="../snake.html">Snake</a></li>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../about.html">About</a></li>
+              <li><a href="../tasks.html">Tasks</a></li>
+              <li><a href="../demo.html">Demo</a></li>
+              <li><a href="../snake.html">Snake</a></li>
             </ul>
-        </nav>
-    </header>
+          </nav>
+        </header>
 
-    <main>
-        <article class="markdown-body">
-            ${content}
-        </article>
-    </main>
+        <main>
+          <article class="markdown-body">${content}</article>
+        </main>
 
-    <footer>
-        <p>&copy; 2025 GitHub Actions Workshop</p>
-    </footer>
+        <footer>
+          <p>&copy; 2025 GitHub Actions Workshop</p>
+        </footer>
 
-    <script src="../js/main.js"></script>
-</body>
-</html>`;
+        <script src="../js/main.js"></script>
+      </body>
+    </html>`;
 }
 
 /**
  * Process markdown files from tasks directory
  */
-function processMarkdownFiles() {
+async function processMarkdownFiles() {
   console.log("Processing markdown files from tasks directory...");
 
   if (!fs.existsSync(tasksDir)) {
@@ -131,6 +126,9 @@ function processMarkdownFiles() {
     return [];
   }
 
+  // Sleep 10 seconds to simulate slow builds
+  await new Promise((resolve) => setTimeout(resolve, 10_000));
+  
   const files = fs
     .readdirSync(tasksDir)
     .filter((file) => file.endsWith(".md"))

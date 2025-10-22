@@ -1,4 +1,4 @@
-# Lesson 3: Steps vs Jobs
+# Lesson 5: Steps vs Jobs
 
 By now, we've seen a few workflows with jobs and steps.
 But what exactly is the difference between a job and a step?
@@ -22,7 +22,7 @@ Here's a quick example to illustrate the difference:
 ```yaml
 jobs:
   build:
-    runs-on: ubuntu-latest  
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v5
@@ -66,3 +66,5 @@ In summary, use jobs to group related steps that can run in parallel, and use st
 Using the workflow from [Task 2: Running a Build](./002-running-build.md) as a starting point, create a new workflow that has two jobs: one for building the project and another for running tests.
 
 Hint: `npm run build` builds the project, and `npm test` runs the tests.
+
+[Next Lesson: Lesson 6 - Job Outputs](006-outputs.md)

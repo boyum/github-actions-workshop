@@ -40,7 +40,7 @@ describe("TaskManager", () => {
     test("should throw error for invalid priority", () => {
       assert.throws(
         () => manager.addTask("Test", "urgent"),
-        /Priority must be one of/
+        /Priority must be one of/,
       );
     });
 
@@ -136,7 +136,7 @@ describe("TaskManager", () => {
       const task = manager.addTask("Test task");
       assert.throws(
         () => manager.updateTask(task.id, { title: "" }),
-        /Title must be a non-empty string/
+        /Title must be a non-empty string/,
       );
     });
   });

@@ -1,97 +1,119 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Snake Game - GitHub Actions Workshop</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
     <header>
-        <h1>GitHub Actions Workshop</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="tasks.html">Tasks</a></li>
-                <li><a href="demo.html">Demo</a></li>
-                <li><a href="snake.html">Snake</a></li>
-            </ul>
-        </nav>
+      <h1>GitHub Actions Workshop</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="tasks.html">Tasks</a></li>
+          <li><a href="demo.html">Demo</a></li>
+          <li><a href="snake.html">Snake</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-        <section class="game-section">
-            <h2>🐍 Snake Game</h2>
-            <p>Take a break from learning and play some Snake! Use arrow keys or WASD to control the snake.</p>
+      <section class="game-section">
+        <h2>🐍 Snake Game</h2>
+        <p>
+          Take a break from learning and play some Snake! Use arrow keys or WASD
+          to control the snake.
+        </p>
 
-            <div class="game-container">
-                <div class="game-info">
-                    <div class="score-display">
-                        <span class="label">Score:</span>
-                        <span id="score" class="score-value">0</span>
-                    </div>
-                    <div class="high-score-display">
-                        <span class="label">High Score:</span>
-                        <span id="high-score" class="score-value">0</span>
-                    </div>
-                </div>
-
-                <canvas id="game-canvas" width="400" height="400"></canvas>
-
-                <div class="game-controls">
-                    <button id="start-button" class="game-btn game-btn-primary">Start Game</button>
-                    <button id="pause-button" class="game-btn game-btn-secondary" disabled>Pause</button>
-                    <button id="reset-button" class="game-btn game-btn-secondary">Reset</button>
-                </div>
-
-                <div class="game-instructions">
-                    <h3>How to Play</h3>
-                    <ul>
-                        <li><strong>Arrow Keys</strong> or <strong>WASD</strong> - Move the snake</li>
-                        <li><strong>Collect food</strong> (red squares) to grow longer</li>
-                        <li><strong>Avoid walls</strong> and don't run into yourself!</li>
-                        <li>The game gets faster as you score more points</li>
-                    </ul>
-                </div>
-
-                <div id="game-over" class="game-over-overlay" style="display: none;">
-                    <div class="game-over-content">
-                        <h2>Game Over!</h2>
-                        <p class="final-score">Your Score: <span id="final-score">0</span></p>
-                        <button id="play-again-button" class="game-btn game-btn-primary">Play Again</button>
-                    </div>
-                </div>
+        <div class="game-container">
+          <div class="game-info">
+            <div class="score-display">
+              <span class="label">Score:</span>
+              <span id="score" class="score-value">0</span>
             </div>
-        </section>
-
-        <section class="game-stats">
-            <h3>Game Statistics</h3>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-icon">🎮</div>
-                    <div class="stat-value" id="games-played">0</div>
-                    <div class="stat-label">Games Played</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">🏆</div>
-                    <div class="stat-value" id="best-score">0</div>
-                    <div class="stat-label">Best Score</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">📊</div>
-                    <div class="stat-value" id="avg-score">0</div>
-                    <div class="stat-label">Average Score</div>
-                </div>
+            <div class="high-score-display">
+              <span class="label">High Score:</span>
+              <span id="high-score" class="score-value">0</span>
             </div>
-        </section>
+          </div>
+
+          <canvas id="game-canvas" width="400" height="400"></canvas>
+
+          <div class="game-controls">
+            <button id="start-button" class="game-btn game-btn-primary">
+              Start Game
+            </button>
+            <button
+              id="pause-button"
+              class="game-btn game-btn-secondary"
+              disabled
+            >
+              Pause
+            </button>
+            <button id="reset-button" class="game-btn game-btn-secondary">
+              Reset
+            </button>
+          </div>
+
+          <div class="game-instructions">
+            <h3>How to Play</h3>
+            <ul>
+              <li>
+                <strong>Arrow Keys</strong> or <strong>WASD</strong> - Move the
+                snake
+              </li>
+              <li>
+                <strong>Collect food</strong> (red squares) to grow longer
+              </li>
+              <li><strong>Avoid walls</strong> and don't run into yourself!</li>
+              <li>The game gets faster as you score more points</li>
+            </ul>
+          </div>
+
+          <div id="game-over" class="game-over-overlay" style="display: none">
+            <div class="game-over-content">
+              <h2>Game Over!</h2>
+              <p class="final-score">
+                Your Score: <span id="final-score">0</span>
+              </p>
+              <button id="play-again-button" class="game-btn game-btn-primary">
+                Play Again
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="game-stats">
+        <h3>Game Statistics</h3>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">🎮</div>
+            <div class="stat-value" id="games-played">0</div>
+            <div class="stat-label">Games Played</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🏆</div>
+            <div class="stat-value" id="best-score">0</div>
+            <div class="stat-label">Best Score</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">📊</div>
+            <div class="stat-value" id="avg-score">0</div>
+            <div class="stat-label">Average Score</div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 GitHub Actions Workshop</p>
+      <p>&copy; 2025 GitHub Actions Workshop</p>
     </footer>
 
     <script src="js/main.js"></script>
     <script src="js/snake.js"></script>
-</body>
+  </body>
 </html>

@@ -4,14 +4,12 @@
   "description": "A hands-on workshop for learning GitHub Actions through practical exercises",
   "scripts": {
     "test": "node --test src/*.test.js",
-    "test:coverage": "node --test --experimental-test-coverage src/*.test.js && node scripts/coverage-report.js",
-    "test:quick": "node --test src/*.test.js",
-    "coverage:report": "node scripts/coverage-report.js",
-    "lint": "echo 'Linting code...' && exit 0",
-    "build": "node src/build.js",
-    "serve": "node src/serve.js",
-    "start": "node src/index.js",
-    "dev": "node --watch src/index.js"
+    "test:full-report": "c8 node src/*.test.js",
+    "test:short-report": "c8 node src/*.test.js 2>&1 | sed -n '/^--------------/,$p'",
+    "test:browser": "node --test src/browser.test.js",
+    "browser:example": "node src/browser.example.js",
+    "compare-coverage-reports": "node scripts/compare-coverage-reports.js",
+    "build": "node scripts/build.js"
   },
   "keywords": [
     "github-actions",
@@ -26,6 +24,7 @@
     "github-markdown-css": "^5.8.1",
     "marked": "^16.4.1",
     "marked-alert": "^2.1.2",
-    "marked-gfm-heading-id": "^4.1.2"
+    "marked-gfm-heading-id": "^4.1.2",
+    "puppeteer": "^24.26.0"
   }
 }
