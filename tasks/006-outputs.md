@@ -290,6 +290,10 @@ Your task is to create a workflow that generates build information and passes it
      - The branch name
      - The commit message
 
+> [!TIP]
+> Remember that the job ids are used to reference outputs. Use `needs.info.outputs.commit-sha` to access the commit SHA
+> from the `info` job in the `summary` job.
+
 **Bonus Challenge:**
 
 - In the `build` job, generate a multiline build report that includes:
