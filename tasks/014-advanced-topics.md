@@ -133,7 +133,7 @@ Containerized custom actions.
 - **VS Code Extension**:
   [GitHub Actions](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-github-actions)
 - **CLI**: [GitHub CLI](https://cli.github.com/) for managing workflows
-- **Linting**: [actionlint](https://github.com/rhymond/actionlint) for workflow validation
+- **Linting**: [actionlint](https://github.com/rhysd/actionlint) for workflow validation
 
 ### **Monitoring & Observability**
 
